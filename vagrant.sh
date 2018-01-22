@@ -28,4 +28,7 @@ echo -e 'Please run
 \033[0;33mphp composer.phar global require "fxp/composer-asset-plugin:^1.4.0"\033[1;32m
 \033[0;33mphp composer.phar install\033[1;32m
 \033[0;33mphp yii migrate\033[1;32m
+\033[0;33mphp yii fixture/load "*"[1;32m
+\033[1;32m vendor/bin/codecept build[1;32m
+\033[1;32m vendor/bin/codecept run[1;32m
 \033[1;32mmanually in project root to finish installation'
