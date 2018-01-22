@@ -43,6 +43,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['email', 'unique', 'targetClass' => self::className(), 'message' => 'Email already exist.'],
             ['email', 'string', 'max' => 255],
             ['phone', 'required'],
+            ['phone','match','pattern'=> '/^((\+375)[\- ]?)?(\(?\d{2}\)?[\- ]?)?[\d\- ]{7}$/', 'message' => 'You should enter phone like: +375-xx-xxxxxxx;'],
             ['phone', 'string', 'max' => 16],
         ];
     }
