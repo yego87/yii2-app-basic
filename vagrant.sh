@@ -31,4 +31,4 @@ echo -e 'Please run
 \033[0;33mphp yii fixture/load "*"[1;32m
 \033[1;32m vendor/bin/codecept build[1;32m
 \033[1;32m vendor/bin/codecept run[1;32m
-\033[1;32mmanually in project root to finish installation'
+\033[1;32m manually in project root to finish installation'
