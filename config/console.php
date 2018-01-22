@@ -1,5 +1,8 @@
 <?php
 
+Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
+Yii::setAlias('@webroot', dirname(__DIR__) . '/web');
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
@@ -27,13 +30,15 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
-    /*
+
     'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
+        'fixture' => [
             'class' => 'yii\faker\FixtureController',
+            'namespace' => 'app\tests\fixtures',
+            'templatePath' => '@tests/fixtures',
+            'fixtureDataPath' => '@tests/fixtures/data',
         ],
     ],
-    */
 ];
 
 if (YII_ENV_DEV) {
